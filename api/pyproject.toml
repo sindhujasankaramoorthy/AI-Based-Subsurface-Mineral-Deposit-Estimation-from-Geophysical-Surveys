@@ -1,7 +1,7 @@
 [project]
 name = "geovision-api"
 version = "0.1.0"
-description = "FastAPI backend for GeoVision AI"
+description = "FastAPI backend for GeoVision AI (ONNX Optimized)"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi",
@@ -10,13 +10,7 @@ dependencies = [
     "python-multipart",
     "numpy==1.26.4",
     "pandas==2.2.3",
-    "torch==2.4.1+cpu",
+    "onnxruntime",
 ]
 
-[[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
-explicit = true
-
-[tool.uv.sources]
-torch = { index = "pytorch-cpu" }
+# No special index needed for onnxruntime (it's standard on PyPI)
