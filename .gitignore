@@ -1,7 +1,19 @@
+# Python
 venv/
+env/
+.env
 __pycache__/
-*.pyc
-*.pth
+*.py[cod]
+*$py.class
+
+# Large files (handled by Git LFS)
+# *.pth
+
+# Project files
+.streamlit/
 *.npy
 *.png
-.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
