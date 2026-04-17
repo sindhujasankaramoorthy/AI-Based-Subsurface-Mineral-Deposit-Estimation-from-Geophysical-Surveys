@@ -1,0 +1,22 @@
+[project]
+name = "geovision-api"
+version = "0.1.0"
+description = "FastAPI backend for GeoVision AI"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "python-multipart",
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+    "torch==2.4.1+cpu",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
