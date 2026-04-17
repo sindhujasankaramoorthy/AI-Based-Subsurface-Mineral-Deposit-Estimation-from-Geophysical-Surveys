@@ -26,7 +26,7 @@ function App() {
     });
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/analyze', params);
+      const response = await axios.post('/api/analyze', params);
       setData(response.data);
       toast.success('Inference Complete', {
         id: toastId,
